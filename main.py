@@ -71,7 +71,7 @@ def doit():
     converter.experimental_new_converter = True  
     converter.optimizations = [tf.lite.Optimize.DEFAULT] 
      
-    converter.representative_dataset = InputDataGenerator(num_samples = 10)
+    converter.representative_dataset = InputDataGenerator(num_samples = 300)
     converter.target_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
     converter.inference_input_type = tf.uint8
     converter.inference_output_type = tf.uint8
